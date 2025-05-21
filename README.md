@@ -4,7 +4,7 @@
 - ✅ [Bluetooth](#bluetooth)
 - ✅ [USB](#usb)
 - ✅ [External display (HDMI)](#external-display)
-- ✅ [Built-in display]#(built-in-display)
+- ✅ [Built-in display](#built-in-display)
 - ✅ [Keyboard](#keyboard)
 - ✅ [Sound](#sound)
 
