@@ -1,12 +1,32 @@
 ## Files for Macbook Pro 15" 2017 Touchbar (14,3)
 
 - ✅ [Wifi](#wifi)
-- ✅ Bluetooth
-- ✅ USB
-- ✅ External display (HDMI)
-- ✅ Built-in display
-- ✅ Keyboard
+- ✅ [Bluetooth](#bluetooth)
+- ✅ [USB](#usb)
+- ✅ [External display (HDMI)](#external-display)
+- ✅ [Built-in display]#(built-in-display)
+- ✅ [Keyboard](#keyboard)
 - ✅ [Sound](#sound)
+
+### Bluetooth
+
+Works out of the box
+
+### USB
+
+Works out of the box
+
+### External Display
+
+Works out of the box
+
+### Built-in Display
+
+Works out of the box
+
+### Keyboard
+
+Still figuring out how to make backlight work.
 
 ### Wifi
 
