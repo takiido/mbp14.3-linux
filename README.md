@@ -1,12 +1,12 @@
 ## Files for Macbook Pro 15" 2017 Touchbar (14,3)
 
-- ✅ Wifi
+- ✅ [Wifi](#wifi)
 - ✅ Bluetooth
 - ✅ USB
 - ✅ External display (HDMI)
 - ✅ Built-in display
 - ✅ Keyboard
-- ✅ Sound
+- ✅ [Sound](#sound)
 
 ### Wifi
 
@@ -21,9 +21,54 @@ $ lspci -nn -d 14e4:
 ```
 ### Sound
 
-Still figuring out how to make sub work
+~~Still figuring out how to make sub work.~~
+✅ After some tricks with ALSA and JamesDSP sound is much better than in Bootcamp but probably not as good as on MacOS.
 
-1. pacman -S wget make gcc linux-headers-generic
-2. clone [snd_hda_macbookpro](https://github.com/davidjo/snd_hda_macbookpro)
-3. ./install.cirrus.driver.sh
-4. reboot
+I'm not sure which one of these really helped but that's the list:
+
+1. #### Commands:
+
+```bash
+sudo pacman -S sof-firmware
+```
+
+```bash
+sudo pacman -S pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber
+```
+
+```bash
+systemctl --user enable --now pipewire pipewire-pulse wireplumber
+```
+
+```bash
+sudo pacman -S alsa-card-profiles
+```
+
+```bash
+systemctl --user restart pipewire
+```
+
+```bash
+pw-metadata -n settings 0 clock.force-quantum 2048
+```
+
+```bash
+sudo pacman -S alsa-ucm-conf
+```
+
+```bash
+   pacman -S wget make gcc linux-headers-generic
+   ```
+```bash
+clone [snd_hda_macbookpro](https://github.com/davidjo/snd_hda_macbookpro)
+```
+
+```bash
+./install.cirrus.driver.sh
+```
+
+2. #### JamesDSP:
+- Dynamic bass boost: 15db
+- Equalizer: Acoustic
+
+3. #### reboot
